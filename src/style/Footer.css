@@ -1,0 +1,73 @@
+/* Footer.css */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+.container-fluid {
+  
+  color: #fff !important;
+  background: linear-gradient(45deg, #d30614, #2655a1);
+}
+
+footer {
+  color: #fff !important;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.fa,
+.fab,
+.fas {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px 10px 5px 0 !important;
+  color: #fff;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li:first-child {
+  font-size: 21px !important;
+  font-weight: bold;
+  margin-bottom: calc(40px + (48 - 40) * ((100vw - 360px) / (1600 - 360))) !important;
+  color: #fff !important;
+}
+
+a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f0f0f0 !important;
+  text-decoration: underline;
+}
+
+.social {
+  position: relative;
+  left: -10px;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.copyright-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.copyright-link:hover {
+  color: #f0f0f0 !important;
+  text-decoration: underline;
+}

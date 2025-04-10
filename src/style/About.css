@@ -1,0 +1,74 @@
+/* Slide in from left animation for image */
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Fade in animation for paragraph */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-paragraph {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  line-height: 1.2; /* Tighten spacing */
+  opacity: 0; /* Start hidden */
+  transition: opacity 1.0s ease-out; /* Smooth transition when hiding */
+}
+
+.animate-on-scroll {
+  opacity: 1;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Custom image styling */
+.custom-img {
+  border: 1px solid #e4c93f; /* Custom border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 400px;
+  width: 700px;
+}
+
+.custom-img:hover {
+  transform: scale(1.05); /* Subtle popup effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-img {
+      width: 100%;
+  }
+
+  .slide-in-left {
+      animation: none; /* Disable animation on smaller screens */
+  }
+
+  .animate-paragraph {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .animate-paragraph {
+      font-size: 0.85rem;
+  }
+}

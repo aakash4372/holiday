@@ -1,0 +1,169 @@
+.tour-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tour-heading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .tour-part {
+    color: black;
+  }
+  
+  .our-part {
+    color: red;
+  }
+  
+  .cottage-part {
+    color: #2655a1;
+  }
+  
+  /* Video Section Styles */
+  .video-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Fullscreen Video Styles */
+  .video-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .fullscreen-player {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+  }
+  
+  /* Fullscreen Image Styles */
+  .fullscreen-image {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+  
+  .close-button:hover {
+    background: rgba(0, 0, 0, 1);
+  }
+  
+  /* Cards Section Styles */
+  .cards-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .video-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cards-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .fullscreen-player {
+      height: 400px;
+    }
+    
+    .fullscreen-image {
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cards-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .fullscreen-player {
+      height: 300px;
+    }
+    
+    .fullscreen-image {
+      height: 300px;
+    }
+  }

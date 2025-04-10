@@ -1,0 +1,63 @@
+.blur-lg {
+    filter: blur(40px);
+  }
+  
+  .transition-all {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .w-4 {
+    width: 1rem;
+  }
+  
+  .h-4 {
+    height: 1rem;
+  }
+  
+  .rounded-3 {
+    border-radius: 1rem;
+  }
+  
+  /* Custom card styling */
+  .custom-card {
+    max-width: 100%; /* Ensures cards fit within their container */
+    height: auto; /* Allows height to adjust based on content */
+    min-height: 300px; /* Minimum height for consistency */
+    margin: 0 auto; /* Centers the card */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767px) {
+    .custom-card {
+      min-height: 250px; /* Smaller height on mobile */
+    }
+    .card-body {
+      padding: 1rem !important; /* Reduced padding on smaller screens */
+    }
+    .fs-6 {
+      font-size: 0.9rem !important; /* Smaller text on mobile */
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .custom-card {
+      min-height: 280px; /* Adjusted height for tablets */
+    }
+  }
+  
+  /* Hover effects for the link */
+  a:hover {
+    color: #6c757d !important;
+    border-color: #6c757d !important;
+  }
+  
+  /* Focus effects for the link */
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #212529, 0 0 0 3px rgba(33, 37, 41, 0.25);
+  }
+  
+  /* Ensure content fits within the card */
+  .card-body {
+    overflow-y: auto; /* Adds scrollbar if content overflows */
+  }

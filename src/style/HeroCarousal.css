@@ -1,0 +1,189 @@
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.zoom-in {
+    animation: zoomIn 3s ease-in-out infinite;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-line {
+    margin: 10px 0;
+}
+
+/* Navigation dots (default for desktop) */
+.carousel-nav {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: blue;
+    width: 16px;
+    height: 16px;
+}
+
+/* Slide animations */
+.slide-left {
+    animation: slideLeft 1s ease forwards;
+}
+
+.slide-right {
+    animation: slideRight 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+@keyframes letterAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(100px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 50vh;
+    }
+
+    .carousel-text {
+        font-size: 1.5rem;
+    }
+
+    /* Move dots to bottom in responsive design */
+    .carousel-nav {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .nav-dot {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+    }
+
+    .nav-dot.active {
+        width: 14px;
+        height: 14px;
+        background-color: blue;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-carousel {
+        height: 40vh;
+    }
+
+    .carousel-text {
+        font-size: 1.2rem;
+    }
+
+    /* Keep dots at bottom */
+    .carousel-nav {
+        bottom: 15px;
+        gap: 10px;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

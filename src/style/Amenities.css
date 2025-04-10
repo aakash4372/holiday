@@ -1,0 +1,86 @@
+.cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cards-heading {
+    text-align: center !important;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .our-text {
+    color: #d30614;
+  }
+  
+  .amenities-text {
+    color: #2655a1;
+  }
+  
+  .card-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: 1px solid #d30614;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.05); /* Pops up and slightly enlarges */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4a90e2;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  @media (max-width: 1024px) {
+    .card-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards-heading {
+      padding-left: 20px;
+      font-size: 1.5rem;
+    }
+  
+    .card-row {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .card {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
